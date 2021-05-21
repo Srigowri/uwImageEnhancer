@@ -1,2 +1,5 @@
-venv
-__pychace__
+*.zip
+__pycache__/
+FoggyImages/
+venv/
+trained_weights/

@@ -1,15 +1,14 @@
 import os
-from flask import Flask, jsonify,render_template,request,redirect,flash,send_file
+from flask import Flask,render_template,request,flash
 import torch
 import torch.optim
-import numpy as np
 import io
 import torchvision.transforms as transforms
 from PIL import Image
 from werkzeug.utils import secure_filename
-
 from torchvision.utils import save_image
-from networks import Generator,Discriminator
+from networks import Generator
+
 app = Flask(__name__, template_folder='templates')
 app.secret_key = os.urandom(12).hex()
 #@app.route('/')
@@ -63,7 +62,6 @@ def transform_image(img,img_height,img_width):
                                         ])
     image = Image.open(io.BytesIO(img))
     return preprocess(image).unsqueeze(0)
-
 
 
 def enhanceImage(img):
