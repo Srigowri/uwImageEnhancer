@@ -1,3 +1,7 @@
+The trained_weights are too large to upload on github, the  results can be reproduced using the UnsupervisedCGAN_tutorial.ipynb
+
+This is first version using the EUVP datasets, I have plans to improve this project.
+
 ------------------------------------------------------------
 Reproducing results:
 
